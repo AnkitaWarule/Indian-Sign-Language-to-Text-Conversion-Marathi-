@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Sign Language to Marathi</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Indian Sign Language to Text</h1>
+
+        <div class="card">
+            <div class="video-section">
+                <img src="{{ url_for('video_feed') }}" alt="Live Feed" class="video-frame" />
+            </div>
+
+            <div class="output-section">
+                <div class="output-box">
+                    <label>Recognized Gesture:</label>
+                    <p id="gesture">...</p>
+                </div>
+                <div class="output-box">
+                    <label>Marathi Translation:</label>
+                    <p id="marathi">...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function fetchTranslation() {
+            fetch('/get_translation')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById("gesture").textContent = data.gesture;
+                    document.getElementById("marathi").textContent = data.marathi;
+                });
+        }
+        setInterval(fetchTranslation, 1000);
+    </script>
+</body>
+</html>

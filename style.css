@@ -1,0 +1,70 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #e0f7fa, #fff3e0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    margin-bottom: 30px;
+    color: #00695c;
+    font-size: 2rem;
+}
+
+.card {
+    background-color: #ffffff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    padding: 20px;
+    width: 700px;
+}
+
+.video-section {
+    margin-bottom: 20px;
+}
+
+.video-frame {
+    width: 100%;
+    max-width: 640px;
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid #009688;
+}
+
+.output-section {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.output-box {
+    margin: 10px;
+    padding: 15px;
+    background-color: #e0f2f1;
+    border-radius: 8px;
+    width: 45%;
+}
+
+label {
+    font-weight: bold;
+    color: #004d40;
+}
+
+#gesture, #marathi {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #388e3c;
+}
